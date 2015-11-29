@@ -60,6 +60,8 @@ func main() {
 	if *fVersion {
 		fmt.Printf("%s %s\n", self(), version)
 		os.Exit(exit)
+	} else if len(args) == 0 {
+		usage()
 	}
 
 	if m, err = dockerMachineInspect(*fMachine); err != nil {
