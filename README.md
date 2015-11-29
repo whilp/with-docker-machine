@@ -32,4 +32,9 @@ $ eval $(docker-machine env default)
 $ docker images
 ```
 
+## Install
+
+Grab the [latest release][].
+
 [docker toolbox]: https://www.docker.com/docker-toolbox
+[latest release]: https://github.com/whilp/with-docker-machine/releases/latest
