@@ -140,7 +140,7 @@ func runCommand(args, env []string) error {
 func runCommandOrPanic(args, env []string) int {
 	exit := 0
 	if err := runCommand(args, env); err != nil {
-		if exitError, ok := err.(*exec.ExitError); !ok {
+		if exitError, ok := err.(*exec.ExitError); ok {
 			waitStatus := exitError.Sys().(syscall.WaitStatus)
 			exit = waitStatus.ExitStatus()
 		} else {
